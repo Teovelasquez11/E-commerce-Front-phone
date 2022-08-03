@@ -1,0 +1,121 @@
+<div style="width: 375px">
+  <div class="contaienr col-md-6">
+    <div class="container cont-header d-inline-flex">
+      <div class="div-arrowleft">
+        <i class="bi bi-arrow-left"></i>
+      </div>
+      <div class="div-title text-center">
+        <h1>Almacén</h1>
+      </div>
+      <div class="div-shopwindow">
+        <i class="bi bi-shop-window"></i>
+      </div>
+    </div>
+    <div class="container d-flex">
+      <input
+        type="text"
+        [(ngModel)]="term"
+        title="term"
+        class="form-control bg-light border rounded"
+        placeholder="   Buscar..."
+      />
+
+      <div>
+        <button class="bi bi-filter border rounded cont-button"></button>
+      </div>
+    </div>
+
+    <div class="container d-inline-flex justify-content-around">
+      <div class="item">
+        <a>
+          <img
+            src="../../../assets/Sneakersmed.jpg"
+            alt="Almacen"
+            class="rounded"
+          />
+          <h6>Almacén</h6>
+        </a>
+      </div>
+      <div class="item">
+        <a>
+          <img
+            src="../../../assets/Sneakersmed.jpg"
+            alt="Accesorios Exterior"
+            class="rounded"
+          />
+          <h6>Accesorios Exterior</h6>
+        </a>
+      </div>
+      <div class="item">
+        <a>
+          <img
+            src="../../../assets/Sneakersmed.jpg"
+            alt="Mantenimiento"
+            class="rounded"
+          />
+          <h6>Mantenimiento</h6>
+        </a>
+      </div>
+      <div class="item">
+        <a>
+          <img
+            src="../../../assets/Sneakersmed.jpg"
+            alt="Accesorios Interior"
+            class="rounded"
+          />
+          <h6>Accesorios Interior</h6>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container" style="width: 400x; height: 700px; overflow: scroll">
+  <ng-container *ngFor="let item of productList | filter: term">
+    <hr />
+    <div class="container" style="width: 100%">
+      <div class="m-t-5px list-group d-flex">
+        <div class="container d-flex">
+          <div
+            class="card shadow-sm align-items-center"
+            style="margin: 8px 15px 0px -19px; width: 150px; height: 110px"
+          >
+            <img
+              src="{{ item.image }}"
+              alt="{{ item.title }}"
+              style="width: 70px"
+            />
+          </div>
+          <div class="container" style="width: 100%">
+            <div class="d-flex">
+              <p
+                style="
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  max-width: 100px;
+                "
+                class="mb-auto p-2 align-items-start"
+              >
+                {{ item.title }}
+              </p>
+              <i
+                class="bi bi-heart mb-auto p-2 align-items-start"
+                style="margin-left: 50px"
+              ></i>
+            </div>
+            <div class="d-flex" style="margin-top: 20px">
+              <p class="mt-auto p-2 align-items-start">
+                <strong>$ {{ item.price }} </strong>
+              </p>
+              <img
+                class="mt-auto p-2 align-items-end"
+                src="../../../assets/Bridgeston.png"
+                style="width: 50px; margin-left: auto; margin-bottom: auto"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
