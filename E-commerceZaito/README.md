@@ -26,7 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-<!-- 
+## Explicación
 Antes de correr el proyecto por favor usar el comando npm install para instalar las dependencias.
 
 Para darle estilos use Bootstrap y Bootstrap Icons, los importe a travez de los cdn en el header y el body del 
@@ -47,8 +47,3 @@ Ya que no era necesario ser responsive, me enfoque en simular el front-end con d
 adjunto envío un recorte del resultado, en caso de faltar alguna explicación, estoy dispuesto para mostrarles como hice el reto
 
 muchas gracias.
-
-
-
-
--->
